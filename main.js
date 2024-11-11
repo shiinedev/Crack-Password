@@ -2,7 +2,7 @@
 let attempts = 3; // Initialize the number of attempts
 
 function checkPassword() {
-    const input = document.getElementById("input-password").value;
+    const input = document.getElementById("input-password");
     const result = document.getElementById("result");
     const inputField = document.getElementById("input-password");
     const checkButton = document.querySelector("button");
@@ -11,8 +11,8 @@ function checkPassword() {
     const correctPassword = "042";
 
     // Check if the entered password matches the correct password
-    if (input === correctPassword) {
-        result.textContent = "Correct! You've cracked the code!";
+    if (input.value === correctPassword) {
+        result.textContent = "Correct! You've cracked the password!";
         result.classList.remove("text-red-500");
         result.classList.add("text-green-500");
         inputField.disabled = true;

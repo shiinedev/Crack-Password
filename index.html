@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puzzle Password Game</title>
+    <title>Password Puzzle Game</title>
     <script src="script.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-200 flex items-center justify-center h-screen">
-    <div class="bg-white shadow-lg rounded-lg p-6 m-40 w-full">
+<body class="bg-gray-100 flex items-center justify-center h-screen p-4">
+    <div class="bg-white shadow-lg rounded-lg p-6 max-w-sm md:max-w-md lg:max-w-lg w-full">
         <h2 class="text-2xl font-bold mb-4 text-center">Crack The Password</h2>
         <p class="text-center text-gray-700 mb-4">A numeric lock has a 3-digit key</p>
         
@@ -19,11 +19,13 @@
         
         <!-- Button to check password -->
         <div class="flex justify-center mb-4">
-            <button onclick="checkPassword()" class="bg-blue-500 text-white px-4 py-2 rounded">Check Password</button>
+            <button onclick="checkPassword()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none">
+                Check Password
+            </button>
         </div>
         
-        <!-- Hint Table -->
-        <div class="grid grid-cols-2 gap-4 text-gray-700">
+        <!-- Hint Table (responsive grid) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700">
             <div class="text-center border p-2 rounded">
                 <p class="font-mono text-lg">682</p>
                 <p class="text-sm">One number is correct and well placed</p>
